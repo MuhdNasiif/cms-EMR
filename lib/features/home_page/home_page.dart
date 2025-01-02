@@ -11,6 +11,9 @@ class HomePage extends StatelessWidget {
           'EMR',
         ),
       ),
+      body: Column(
+        children: [Text('Electronic Medical Records ')],
+      ),
     );
   }
 }
