@@ -1,4 +1,5 @@
 import 'package:cms_emrgroup/components/app_bottom.dart';
+import 'package:cms_emrgroup/features/druglist/drug.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: AppBottomBar(),
+      home:Drug(),
     );
   }
 }
