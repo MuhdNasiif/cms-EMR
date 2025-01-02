@@ -1,5 +1,6 @@
 import 'package:cms_emrgroup/utils/app_color.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Drug extends StatefulWidget {
   const Drug({super.key});
@@ -15,7 +16,12 @@ class _DrugState extends State<Drug> {
       body: Column(
         children: [
           ExpansionTile(leading: Image(image: AssetImage("assets/Vector (1).png")),
-          iconColor:primarycolor,title: Text("Omeparazole"),
+          subtitle: Row(
+            children: [
+              Text("Prilosec",style: GoogleFonts.roboto(fontSize: 17),)
+            ],
+          ),
+          iconColor:primarycolor,title: Text("Omeparazole",style:GoogleFonts.roboto(fontSize: 20,fontWeight: FontWeight.w500),),
           children: [
             Text("sjfj")
           ],)
