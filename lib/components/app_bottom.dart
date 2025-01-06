@@ -1,6 +1,7 @@
 import 'package:cms_emrgroup/features/doctors_page/doctors_page.dart';
 import 'package:cms_emrgroup/features/home_page/home_page.dart';
-import 'package:cms_emrgroup/features/patients_page/patient_page.dart';
+import 'package:cms_emrgroup/features/settings_page/emr/Investigation/investigation.dart';
+import 'package:cms_emrgroup/features/settings_page/emr/diagnosis_page/diagnosis_page.dart';
 import 'package:cms_emrgroup/features/settings_page/settings_page.dart';
 import 'package:cms_emrgroup/utils/app_color.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class _AppBottomBarState extends State<AppBottomBar> {
   final List<Widget> _pages = [
     HomePage(),
     DoctorsPage(),
-    PatientPage(),
+    InvestigationPage(),
     SettingsPage()
   ];
   @override
