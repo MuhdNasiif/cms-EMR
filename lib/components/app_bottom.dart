@@ -1,4 +1,5 @@
 import 'package:cms_emrgroup/features/doctors_page/doctors_page.dart';
+import 'package:cms_emrgroup/features/druglist/drug.dart';
 import 'package:cms_emrgroup/features/home_page/home_page.dart';
 import 'package:cms_emrgroup/features/patients_page/patient_page.dart';
 import 'package:cms_emrgroup/features/settings_page/settings_page.dart';
@@ -21,7 +22,7 @@ class _AppBottomBarState extends State<AppBottomBar> {
     HomePage(),
     DoctorsPage(),
     PatientPage(),
-    SettingsPage()
+    Drug()
   ];
   @override
   Widget build(BuildContext context) {
