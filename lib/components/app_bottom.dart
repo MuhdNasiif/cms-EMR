@@ -1,6 +1,7 @@
 import 'package:cms_emrgroup/features/doctors_page/doctors_page.dart';
 import 'package:cms_emrgroup/features/druglist/drug.dart';
 import 'package:cms_emrgroup/features/home_page/home_page.dart';
+import 'package:cms_emrgroup/features/patients_page/patient_page.dart';
 import 'package:cms_emrgroup/features/settings_page/emr/Investigation/investigation.dart';
 import 'package:cms_emrgroup/features/settings_page/emr/diagnosis_page/diagnosis_page.dart';
 import 'package:cms_emrgroup/features/settings_page/settings_page.dart';
@@ -22,13 +23,10 @@ class _AppBottomBarState extends State<AppBottomBar> {
   final List<Widget> _pages = [
     HomePage(),
     DoctorsPage(),
-<<<<<<< HEAD
     InvestigationPage(),
-    SettingsPage()
-=======
+    SettingsPage(),
     PatientPage(),
     Drug()
->>>>>>> najif
   ];
   @override
   Widget build(BuildContext context) {

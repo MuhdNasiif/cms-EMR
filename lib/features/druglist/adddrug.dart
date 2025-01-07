@@ -14,16 +14,16 @@ class Adddrug extends StatefulWidget {
 }
 
 class _AdddrugState extends State<Adddrug> {
+  String dropdownValue = "mg";
 
-  String dropdownValue="mg";
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: InkWell(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Drug()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Drug()));
           },
           child: CircleAvatar(
             backgroundColor: secondarycolor,
@@ -37,7 +37,8 @@ class _AdddrugState extends State<Adddrug> {
         title: Center(
           child: Text(
             "Add Drug",
-            style: GoogleFonts.roboto(fontSize: 22, fontWeight: FontWeight.bold),
+            style:
+                GoogleFonts.roboto(fontSize: 22, fontWeight: FontWeight.bold),
           ),
         ),
       ),
@@ -50,7 +51,8 @@ class _AdddrugState extends State<Adddrug> {
             SizedBox(height: 10),
             Text(
               "Drug Name",
-              style: GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w500),
+              style:
+                  GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w500),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10),
@@ -70,7 +72,8 @@ class _AdddrugState extends State<Adddrug> {
             ),
             Text(
               "Generic Name",
-              style: GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w500),
+              style:
+                  GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w500),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10),
@@ -90,7 +93,8 @@ class _AdddrugState extends State<Adddrug> {
             ),
             Text(
               "Frequency",
-              style: GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w500),
+              style:
+                  GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w500),
             ),
             SizedBox(height: 10),
             Row(
@@ -116,7 +120,9 @@ class _AdddrugState extends State<Adddrug> {
                 Text(
                   "-",
                   style: TextStyle(
-                      fontSize: 35, fontWeight: FontWeight.bold, color: primarycolor),
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold,
+                      color: primarycolor),
                 ),
                 SizedBox(width: 5),
                 Container(
@@ -138,7 +144,9 @@ class _AdddrugState extends State<Adddrug> {
                 Text(
                   "-",
                   style: TextStyle(
-                      fontSize: 35, fontWeight: FontWeight.bold, color: primarycolor),
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold,
+                      color: primarycolor),
                 ),
                 SizedBox(width: 5),
                 Container(
@@ -161,14 +169,15 @@ class _AdddrugState extends State<Adddrug> {
             SizedBox(height: 10),
             Text(
               "Dosage",
-              style: GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w500),
+              style:
+                  GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w500),
             ),
             SizedBox(height: 10),
             Row(
-                 mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                   height: 45,
                   width: 170,
                   child: TextField(
@@ -184,73 +193,78 @@ class _AdddrugState extends State<Adddrug> {
                     ),
                   ),
                 ),
-                SizedBox(width: 10,),
- Container(
-  height: 45,
-  width: 87,
-  decoration: BoxDecoration(
-    color: secondarycolor,
-    borderRadius: BorderRadius.circular(8),
-  ),
-  child: DropdownButtonHideUnderline(
-    child: DropdownButton<String>(
-      value: dropdownValue, 
-      icon: Icon(
-        Icons.arrow_drop_down_sharp,
-        color: primarycolor,
-        size: 30,
-      ),
-      elevation: 16,
-      style: GoogleFonts.roboto(
-        fontSize: 20,
-        fontWeight: FontWeight.w500,
-        color: Colors.black,
-      ),
-      onChanged: (String? newValue) {  
-        setState(() {
-          dropdownValue = newValue!;
-        });
-      },
-      items: <String>['mg', 'kg', 'g', 'lb']
-          .map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value),
-        );
-      }).toList(),
-    ),
-  ),
-)
-
+                SizedBox(
+                  width: 10,
+                ),
+                Container(
+                  height: 45,
+                  width: 87,
+                  decoration: BoxDecoration(
+                    color: secondarycolor,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton<String>(
+                      value: dropdownValue,
+                      icon: Icon(
+                        Icons.arrow_drop_down_sharp,
+                        color: primarycolor,
+                        size: 30,
+                      ),
+                      elevation: 16,
+                      style: GoogleFonts.roboto(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black,
+                      ),
+                      onChanged: (String? newValue) {
+                        setState(() {
+                          dropdownValue = newValue!;
+                        });
+                      },
+                      items: <String>['mg', 'kg', 'g', 'lb']
+                          .map<DropdownMenuItem<String>>((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
+                    ),
+                  ),
+                )
               ],
             ),
-             SizedBox(height: 10),
+            SizedBox(height: 10),
             Text(
               "Instruction",
-              style: GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w500),
+              style:
+                  GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w500),
             ),
-            SizedBox(height: 10,),
-            Container(
+            SizedBox(
+              height: 10,
+            ),
+            SizedBox(
               height: 150,
               width: 400,
               child: TextField(
                 decoration: InputDecoration(
                   hintText: "instruction",
-                    hintStyle: TextStyle(
+                  hintStyle: TextStyle(
                       fontSize: 18, color: Color.fromARGB(255, 118, 113, 113)),
                   fillColor: secondarycolor,
                   filled: true,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                     borderSide: BorderSide.none,
+                  ),
                 ),
-              ),
               ),
             ),
             Center(
               child: InkWell(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Editdrug()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Editdrug()));
                 },
                 child: Container(
                   height: 37,
@@ -259,7 +273,14 @@ class _AdddrugState extends State<Adddrug> {
                     borderRadius: BorderRadius.circular(35),
                     color: primarycolor,
                   ),
-                  child: Center(child: Text("SUBMIT",style: GoogleFonts.roboto(fontSize: 18,fontWeight: FontWeight.w600,color: colorwhite),)),
+                  child: Center(
+                      child: Text(
+                    "SUBMIT",
+                    style: GoogleFonts.roboto(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                        color: colorwhite),
+                  )),
                 ),
               ),
             )

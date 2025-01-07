@@ -13,3 +13,4 @@ List<EmrListItems> items = [
   EmrListItems(image: 'assets/Layer_1.png', name: 'Diagnosis'),
   EmrListItems(image: 'assets/Layer_2-4.png', name: 'Investigation')
 ];
+
